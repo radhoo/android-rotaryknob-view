@@ -146,7 +146,7 @@ public class RoundKnobButton extends RelativeLayout implements OnGestureListener
 			if (deg > 180) deg = deg - 360;
 			Matrix matrix=new Matrix();
 			ivRotor.setScaleType(ScaleType.MATRIX);   
-			matrix.postRotate((float) deg, 210/2,210/2);//getWidth()/2, getHeight()/2);
+          		matrix.postRotate(deg, (ivRotor.getHeight() / 2.0f),  ivRotor.getHeight() / 2.0f); // 210/2,210/2);
 			ivRotor.setImageMatrix(matrix);
 		}
 	}
