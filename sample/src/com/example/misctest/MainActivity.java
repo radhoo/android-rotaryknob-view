@@ -73,10 +73,13 @@ public class MainActivity extends Activity {
         
         rv.setRotorPercentage(100);
         rv.SetListener(new RoundKnobButtonListener() {
+		
+			@Override
 			public void onStateChange(boolean newstate) {
 				Toast.makeText(MainActivity.this,  "New state:"+newstate,  Toast.LENGTH_SHORT).show();
 			}
 			
+			@Override	
 			public void onRotate(final int percentage) {
 				tv2.post(new Runnable() {
 					public void run() {
